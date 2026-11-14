@@ -3,151 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expo Mini - Company Profile</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Nexora Tech - Official Corporate Profile</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <style>
-        /* Agar scroll anchor link meluncur mulus */
-        html { scroll-behavior: smooth; }
-        /* Memberi jarak agar konten tidak tertutup sticky navbar */
-        body { padding-top: 70px; } 
-        
-        /* CSS Khusus Foto Petinggi agar proporsional/lingkaran & tidak gepeng */
-        .foto-petinggi {
-            width: 150px;
-            height: 150px;
-            object-fit: cover; 
-            border: 4px solid #0d6efd;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarUtama">
 
-    <!-- ================= NAVBAR (TUGAS CEO) ================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+    <!-- STICKY NAVBAR -->
+    <nav id="navbarUtama" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#hero">ExpoMini Corp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                <img src="assets/images/logo.png" alt="Logo" width="36" height="36" class="rounded">
+                <span>NEXORA<span class="text-primary">.ID</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#clients">Klien</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#eksekutif">Pimpinan</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3" href="#kontak">Hubungi Kami</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ================= TEMPAT INTEGRASI SECTION ================= -->
-    
-    <!-- PASTE KODE DARI CTO (modul-hero.html) DI SINI -->
-<section id="hero" class="py-5">
-    <div class="container">
+    <!-- TEMPAT INTEGRASI SECTION LAINNYA AKAN DI-PASTE DI SINI -->
 
-        <!-- Welcome Banner -->
-        <div class="text-center text-white p-5 rounded-4 shadow"
-             style="background: linear-gradient(135deg, #0d6efd, #052c65);">
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
 
-            <h1 class="display-4 fw-bold mb-3">
-                Welcome to Our Company
-            </h1>
-
-            <p class="lead mb-4">
-                Our Commitment to Quality, Innovation, and Excellence.
-            </p>
-
-            <a href="#about" class="btn btn-light btn-lg">
-                Explore More <i class="bi bi-arrow-right"></i>
-            </a>
-
-        </div>
-
-        <!-- Quick Stats -->
-        <div class="row text-center mt-5 g-4">
-
-            <!-- Card 1 -->
-            <div class="col-6 col-md-3">
-                <div class="bg-light p-4 rounded-4 shadow-sm h-100">
-                    <i class="bi bi-people-fill text-primary fs-1"></i>
-                    <h2 class="fw-bold mt-2">5</h2>
-                    <p class="text-muted mb-0">Team Members</p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-6 col-md-3">
-                <div class="bg-light p-4 rounded-4 shadow-sm h-100">
-                    <i class="bi bi-grid-fill text-primary fs-1"></i>
-                    <h2 class="fw-bold mt-2">4</h2>
-                    <p class="text-muted mb-0">Main Sections</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-6 col-md-3">
-                <div class="bg-light p-4 rounded-4 shadow-sm h-100">
-                    <i class="bi bi-building text-primary fs-1"></i>
-                    <h2 class="fw-bold mt-2">1</h2>
-                    <p class="text-muted mb-0">Company Profile</p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-6 col-md-3">
-                <div class="bg-light p-4 rounded-4 shadow-sm h-100">
-                    <i class="bi bi-star-fill text-primary fs-1"></i>
-                    <h2 class="fw-bold mt-2">100%</h2>
-                    <p class="text-muted mb-0">Team Commitment</p>
-                </div>
-            </div>
-
-        </div>
-
+<!-- HERO BANNER -->
+<section id="beranda" class="bg-dark text-white text-center py-5 position-relative"
+         style="background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+         url('assets/images/hero-bg.jpg') center/cover;">
+    <div class="container py-5">
+        <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Enterprise Digital Solution</span>
+        <h1 class="display-4 fw-bold mb-3">Mentransformasi Bisnis Melalui Inovasi Digital</h1>
+        <p class="lead text-light mb-4 mx-auto" style="max-width: 700px;">
+            Kami adalah perusahaan penyedia arsitektur teknologi terdepan yang menggerakkan
+            efisiensi bisnis modern dengan standar kelas dunia.
+        </p>
+        <a href="#eksekutif" class="btn btn-outline-light btn-lg px-4 me-2">Jajaran Direksi</a>
+        <a href="#layanan" class="btn btn-primary btn-lg px-4">Solusi Kami</a>
     </div>
 </section>
 
-    <!-- PASTE KODE DARI COO (modul-about.html) DI SINI -->
+<!-- QUICK STATS -->
+<section id="tentang" class="bg-primary text-white py-4">
+    <div class="container">
+        <div class="row text-center g-3">
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold mb-0">150+</h3>
+                <small class="text-white-50">Proyek Selesai</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold mb-0">99.8%</h3>
+                <small class="text-white-50">Tingkat Kepuasan</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold mb-0">24/7</h3>
+                <small class="text-white-50">Dukungan Teknis</small>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold mb-0">5</h3>
+                <small class="text-white-50">Direksi Eksekutif</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT & SERVICES -->
 <section id="layanan" class="py-5 bg-light">
     <div class="container py-4">
         <div class="text-center mb-5">
             <h6 class="text-primary fw-bold text-uppercase">Layanan Unggulan</h6>
             <h2 class="fw-bold">Solusi Terintegrasi Skala Korporat</h2>
         </div>
-
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="fs-1 text-primary mb-3">
-                        <i class="bi bi-laptop"></i>
-                    </div>
+                    <div class="fs-1 text-primary mb-3"><i class="bi bi-laptop"></i></div>
                     <h5 class="fw-bold">Enterprise Web Platform</h5>
                     <p class="text-muted">Pengembangan portal web scalable, aman, dan responsif dengan performa tinggi.</p>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="fs-1 text-primary mb-3">
-                        <i class="bi bi-shield-lock"></i>
-                    </div>
+                    <div class="fs-1 text-primary mb-3"><i class="bi bi-shield-lock"></i></div>
                     <h5 class="fw-bold">Cyber Security & Audit</h5>
                     <p class="text-muted">Proteksi data korporasi dari serangan siber melalui protokol keamanan multi-layer.</p>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="fs-1 text-primary mb-3">
-                        <i class="bi bi-cloud-arrow-up"></i>
-                    </div>
+                    <div class="fs-1 text-primary mb-3"><i class="bi bi-cloud-arrow-up"></i></div>
                     <h5 class="fw-bold">Cloud Infrastructure</h5>
                     <p class="text-muted">Migrasi server dan pemeliharaan arsitektur cloud berbiaya hemat dan zero-downtime.</p>
                 </div>
@@ -156,7 +117,7 @@
     </div>
 </section>
 
-    <!-- PASTE KODE DARI CMO (modul-leadership.html) DI SINI -->
+<!-- DEWAN DIREKSI (5 SISWA) -->
 <section id="eksekutif" class="py-5 bg-white">
     <div class="container py-4">
         <div class="text-center mb-5">
@@ -172,9 +133,9 @@
             <div class="col-6 col-lg-4 text-center">
                 <div class="card border-0 shadow-sm p-3 h-100">
                     <img src="assets/images/ceo.jpg" alt="CEO" class="rounded-circle mx-auto my-3 border border-3 border-primary object-fit-cover" style="width: 130px; height: 130px;">
-                    <h5 class="fw-bold mb-1">Alfaribi Kent Nayottama</h5>
+                    <h5 class="fw-bold mb-1">[Nama Siswa 1]</h5>
                     <span class="text-primary small fw-semibold">Chief Executive Officer</span>
-                    <p class="small text-muted mt-2">Memimpin perusahaan dengan visi yang jelas, inovasi berkelanjutan, dan strategi terbaik untuk mencapai kesuksesan bersama."</p>
+                    <p class="small text-muted mt-2">"Memimpin visi perusahaan dan arah strategi ekspansi jangka panjang."</p>
                 </div>
             </div>
 
@@ -182,9 +143,9 @@
             <div class="col-6 col-lg-4 text-center">
                 <div class="card border-0 shadow-sm p-3 h-100">
                     <img src="assets/images/cto.jpg" alt="CTO" class="rounded-circle mx-auto my-3 border border-3 border-primary object-fit-cover" style="width: 130px; height: 130px;">
-                    <h5 class="fw-bold mb-1">Haikal Aydenrafa Aditia</h5>
+                    <h5 class="fw-bold mb-1">[Nama Siswa 2]</h5>
                     <span class="text-primary small fw-semibold">Chief Technology Officer</span>
-                    <p class="small text-muted mt-2">"Mengembangkan teknologi inovatif dan solusi digital yang cerdas untuk menciptakan masa depan yang lebih maju.."</p>
+                    <p class="small text-muted mt-2">"Mengarsitektur sistem komputasi dan inovasi produk berbasis AI."</p>
                 </div>
             </div>
 
@@ -192,9 +153,9 @@
             <div class="col-6 col-lg-4 text-center">
                 <div class="card border-0 shadow-sm p-3 h-100">
                     <img src="assets/images/coo.jpg" alt="COO" class="rounded-circle mx-auto my-3 border border-3 border-primary object-fit-cover" style="width: 130px; height: 130px;">
-                    <h5 class="fw-bold mb-1">Ahmad Alfathir</h5>
+                    <h5 class="fw-bold mb-1">[Nama Siswa 3]</h5>
                     <span class="text-primary small fw-semibold">Chief Operating Officer</span>
-                    <p class="small text-muted mt-2">Mewujudkan operasional perusahaan yang efektif, efisien, dan berkualitas demi memberikan pelayanan terbaik kepada pelanggan."</p>
+                    <p class="small text-muted mt-2">"Memastikan kualitas alur operasional dan kepuasan implementasi klien."</p>
                 </div>
             </div>
 
@@ -202,9 +163,9 @@
             <div class="col-6 col-lg-4 text-center">
                 <div class="card border-0 shadow-sm p-3 h-100">
                     <img src="assets/images/cmo.jpg" alt="CMO" class="rounded-circle mx-auto my-3 border border-3 border-primary object-fit-cover" style="width: 130px; height: 130px;">
-                    <h5 class="fw-bold mb-1">Putra Zalvanur Arriza</h5>
+                    <h5 class="fw-bold mb-1">[Nama Siswa 4]</h5>
                     <span class="text-primary small fw-semibold">Chief Marketing Officer</span>
-                    <p class="small text-muted mt-2">"Membangun identitas brand yang kuat, memperluas jangkauan pasar, dan menciptakan hubungan yang berkelanjutan dengan pelanggan."</p>
+                    <p class="small text-muted mt-2">"Membangun identitas brand korporat dan kemitraan pasar internasional."</p>
                 </div>
             </div>
 
@@ -212,55 +173,35 @@
             <div class="col-6 col-lg-4 text-center">
                 <div class="card border-0 shadow-sm p-3 h-100">
                     <img src="assets/images/cfo.jpg" alt="CFO" class="rounded-circle mx-auto my-3 border border-3 border-primary object-fit-cover" style="width: 130px; height: 130px;">
-                    <h5 class="fw-bold mb-1">Bramantyo Wicaksono</h5>
+                    <h5 class="fw-bold mb-1">[Nama Siswa 5]</h5>
                     <span class="text-primary small fw-semibold">Chief Financial Officer</span>
-                    <p class="small text-muted mt-2">"Mengelola keuangan secara transparan dan bertanggung jawab untuk menjaga stabilitas serta mendukung pertumbuhan perusahaan.."</p>
+                    <p class="small text-muted mt-2">"Mengelola alokasi modal investasi dan tata kelola transparansi keuangan."</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- PASTE KODE DARI CFO (modul-footer.html) DI SINI -->
-    <!-- FOOTER & KONTAK -->
+<!-- FOOTER & KONTAK -->
 <footer id="kontak" class="bg-dark text-white pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-5">
-        <h5 class="fw-bold text-primary">NEXORA TECH CORP.</h5>
-        <p class="text-white-50 small">
-          Penyedia solusi rekayasa teknologi dan transformasi digital yang berdedikasi membangun masa depan industri yang berkelanjutan.
-        </p>
-      </div>
-
-      <div class="col-md-3">
-        <h6 class="fw-bold">Kantor Pusat</h6>
-        <p class="small text-white-50">
-          Gedung Expo Hall Stand 04<br>
-          Kabupaten Bogor, Jawa Barat
-        </p>
-      </div>
-
-      <div class="col-md-4">
-        <h6 class="fw-bold">Kontak Representatif</h6>
-        <p class="small text-white-50 mb-1">
-          <i class="bi bi-envelope me-2"></i>contact@nexora.id
-        </p>
-        <p class="small text-white-50">
-          <i class="bi bi-whatsapp me-2"></i>+62 812-3456-7890
-        </p>
-      </div>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <h5 class="fw-bold text-primary">NEXORA TECH CORP.</h5>
+                <p class="text-light-50 small">Penyedia solusi rekayasa teknologi dan transformasi digital yang berdedikasi membangun masa depan industri yang berkelanjutan.</p>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Kantor Pusat</h6>
+                <p class="small text-white-50">Gedung Expo Hall Stand 04<br>Kabupaten Bogor, Jawa Barat</p>
+            </div>
+            <div class="col-md-4">
+                <h6 class="fw-bold">Kontak Representatif</h6>
+                <p class="small text-white-50 mb-1"><i class="bi bi-envelope me-2"></i>contact@nexora.id</p>
+                <p class="small text-white-50"><i class="bi bi-whatsapp me-2"></i>+62 812-3456-7890</p>
+            </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <p class="text-center small text-white-50 mb-0">&copy; 2026 Nexora Tech. Dibuat oleh Tim Eksekutif Studentday Expo Kelas 10.</p>
     </div>
+</footer> 
 
-    <hr class="border-secondary my-4">
-
-    <p class="text-center small text-white-50 mb-0">
-      &copy; 2026 Nexora Tech. Dibuat oleh Tim Eksekutif Studentday Expo Kelas 10.
-    </p>
-  </div>
-</footer>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
