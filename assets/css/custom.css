@@ -1,0 +1,234 @@
+/* =========================================
+   1. Global & Smooth Scrolling
+   ========================================= */
+html {
+    scroll-behavior: smooth; /* Link anchor meluncur mulus */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 70px; /* Memberi ruang agar konten tidak tertutup navbar sticky */
+}
+
+/* =========================================
+   2. Sticky Navbar Customization
+   ========================================= */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus di bawah navbar */
+    background-color: #ffffff !important; /* Pastikan background putih jika transparan */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #0d6efd !important; /* Warna biru Bootstrap atau sesuaikan dengan tema */
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #555 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #0d6efd !important;
+}
+
+/* =========================================
+   3. Section 1: Hero Banner & Stats (CTO)
+   ========================================= */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-bg.jpg'); /* Ganti dengan gambar background jika ada */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffc107; /* Warna kuning emas untuk angka */
+}
+
+.stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   4. Section 2: Visi Misi & Services (COO)
+   ========================================= */
+#about {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   5. Section 3: Executive Board / Leadership (CMO) - KUNCI
+   ========================================= */
+#leadership {
+    padding: 60px 0;
+}
+
+.leader-card {
+    text-align: center;
+    padding: 20px;
+    border: none;
+    background: transparent;
+}
+
+/* Membuat foto bulat dan proporsional (Tidak Gepeng) */
+.leader-img-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+.leader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Kunci agar gambar tidak gepeng */
+    border-radius: 50%; /* Membuat lingkaran sempurna */
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leader-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.leader-role {
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.leader-quote {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* =========================================
+   6. Section 4: Clients & Footer (CFO)
+   ========================================= */
+#clients {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.client-logo {
+    max-height: 80px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+footer h5 {
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* =========================================
+   7. Responsive Adjustments
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .stat-box {
+        margin-bottom: 15px;
+    }
+    
+    body {
+        padding-top: 60px; /* Sesuaikan padding untuk mobile */
+    }
+}
